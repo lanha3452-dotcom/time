@@ -1,0 +1,102 @@
+<style>
+/* 1. 定義全局變數：方便統一調整色系與圓角 */
+:root {
+    --bg-color: #f4f7f9;       /* 淺藍灰色背景，營造冷靜感 */
+    --card-bg: #ffffff;        /* 卡片純白 */
+    --primary-color: #5d7b93;  /* 靜謐藍，主標題與重點色 */
+    --accent-color: #e2e8f0;   /* 淺灰色，用於標籤背景 */
+    --text-main: #374151;      /* 深灰色文字，比純黑更易讀 */
+    --text-light: #6b7280;     /* 輔助文字顏色 */
+    --border-radius: 20px;     /* 統一的大圓角設定 */
+}
+
+/* 2. 基本重置與字體設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "PingFang TC", "Heiti TC", "Microsoft JhengHei", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.8;
+    padding: 60px 20px;
+}
+
+/* 3. 版面佈局 */
+.container {
+    max-width: 700px; /* 縮窄寬度，增加左右留白，提升閱讀專注度 */
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+/* 4. 卡片設計：這是視覺的核心 */
+.myth-card {
+    background: var(--card-bg);
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: var(--border-radius);
+    /* 柔和的投影，讓卡片看起來像浮在紙面上 */
+    box-shadow: 0 10px 30px rgba(93, 123, 147, 0.05); 
+    transition: all 0.3s ease;
+}
+
+/* 滑鼠經過時的微動效，增加互動感 */
+.myth-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(93, 123, 147, 0.1);
+}
+
+/* 5. 標籤與標題 */
+.myth-tag {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.myth-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* 6. 行動建議區塊 (Action Tip) */
+.action-tip {
+    margin-top: 25px;
+    background: #f8fafc;
+    border-left: 4px solid var(--primary-color);
+    padding: 20px;
+    border-radius: 0 12px 12px 0;
+}
+
+.action-tip strong {
+    color: var(--primary-color);
+    font-size: 0.95rem;
+}
+
+/* 7. 響應式：手機版調整 */
+@media (max-width: 480px) {
+    body { padding: 30px 15px; }
+    .myth-card { padding: 25px; }
+    header h1 { font-size: 1.6rem; }
+}
+<style>
